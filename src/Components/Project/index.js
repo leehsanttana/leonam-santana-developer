@@ -1,13 +1,18 @@
 import React from "react";
 import * as C from "./styles";
 import Subtitle from "../Elements/Subtitle";
+import Button from "../Elements/Button";
 
-const Project = ({ href }) => {
+const Project = ({ href, setActiveModal }) => {
+  function handleClick() {
+    setActiveModal(true);
+  }
+
   return (
     <C.Project>
       <C.ProjectWrapper>
         <div>
-          <button>Veja +</button>
+          <Button onClick={handleClick}>Veja +</Button>
         </div>
       </C.ProjectWrapper>
       <Subtitle subtitle="Nome do Projeto:" />

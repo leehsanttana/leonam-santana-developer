@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Contacts = styled.section`
-  padding: 50px 160px; 
+  padding: 50px 160px;
 `;
 
 export const SocialLinks = styled.ul`
@@ -9,21 +9,18 @@ export const SocialLinks = styled.ul`
   display: flex;
   gap: 2rem;
 
-  li{
+  li {
     list-style-type: none;
     background: var(--purple);
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
-    .icons{
-      display: block;
-      padding: 2.5rem;
-      width: 35px;
-      height: 35px;
-      fill: var(--white);
-      transition: .4s ease;
+    .icons {
+      padding: 1.2rem 1.5rem;
+      width: 45px;
+      height: 45px;
     }
 
-    &:hover{
+    &:hover {
       transform: scale(0.9);
     }
   }

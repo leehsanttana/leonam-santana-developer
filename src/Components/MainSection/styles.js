@@ -65,16 +65,4 @@ export const SocialLinks = styled.ul`
   list-style-type: none;
   gap: 1.5rem;
   justify-content: flex-end;
-
-  .icons {
-    width: 35px;
-    height: 35px;
-    fill: var(--white);
-    transition: 0.4s ease;
-  }
-
-  a:hover .icons {
-    fill: var(--purple);
-    transform: scale(0.9);
-  }
 `;

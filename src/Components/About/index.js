@@ -2,7 +2,7 @@ import React from "react";
 import * as C from "./styles";
 import Title from "../Elements/Title";
 import Subtitle from "../Elements/Subtitle";
-import CallToAction from "../Elements/CallToAction";
+import Button from "../Elements/Button";
 
 const About = () => {
   return (
@@ -40,7 +40,7 @@ const About = () => {
           <li>Github</li>
         </div>
       </ul>
-      <CallToAction href="#">Veja meus projetos</CallToAction>
+      <Button>Veja meus projetos</Button>
     </C.About>
   );
 };

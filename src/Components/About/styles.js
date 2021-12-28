@@ -22,6 +22,10 @@ export const About = styled.section`
       color: var(--cyan);
     }
   }
+
+  button {
+    margin-top: 2.5rem;
+  }
 `;
 
 export const TextAboutArea = styled.section`

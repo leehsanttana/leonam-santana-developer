@@ -6,6 +6,7 @@ import {
   LogoInstagram,
   LogoWhatsapp
 } from "react-ionicons";
+import LinkButton from "../Elements/LinkButton";
 
 const MainSection = () => {
   return (
@@ -25,33 +26,33 @@ const MainSection = () => {
         </C.MainSubtitle>
         <C.SocialLinks>
           <li>
-            <a href="https://github.com/leehsanttana" target="_blank">
+            <LinkButton href="https://github.com/leehsanttana" target="_blank">
               <LogoGithub cssClasses="icons" />
-            </a>
+            </LinkButton>
           </li>
           <li>
-            <a
+            <LinkButton
               href="https://www.linkedin.com/in/leonam-santana-5352a61b3/"
               target="_blank"
             >
               <LogoLinkedin cssClasses="icons" />
-            </a>
+            </LinkButton>
           </li>
           <li>
-            <a
+            <LinkButton
               href="https://instagram.com/leonam.santtana?igshid=s2debj44nc6v"
               target="_blank"
             >
               <LogoInstagram cssClasses="icons" />
-            </a>
+            </LinkButton>
           </li>
           <li>
-            <a
+            <LinkButton
               href="https://api.whatsapp.com/send?phone=5521976370007"
               target="_blank"
             >
               <LogoWhatsapp cssClasses="icons" />
-            </a>
+            </LinkButton>
           </li>
         </C.SocialLinks>
       </C.Column2>
