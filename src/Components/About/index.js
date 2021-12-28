@@ -1,16 +1,15 @@
-import React from 'react';
-import * as C from './styles';
-import Title from '../Elements/Title';
-import Subtitle from '../Elements/Subtitle';
-import CallToAction from '../Elements/CallToAction';
+import React from "react";
+import * as C from "./styles";
+import Title from "../Elements/Title";
+import Subtitle from "../Elements/Subtitle";
+import CallToAction from "../Elements/CallToAction";
 
 const About = () => {
   return (
     <C.About>
       <Title title="Sobre" />
-      <div>
+      <C.TextAboutArea>
         <p>
-          {' '}
           Me chamo Leonam Santana, tenho 24 anos e sou desenvolvedor Front-End.
         </p>
         <p>
@@ -21,13 +20,13 @@ const About = () => {
           Meu interesse na área do Front-End começou em 2017, quando fiquei
           curioso em como funcionava um website e como ele é feito. Quando criei
           meu primeiro site, a vontade em me aprofundar pela área foi só
-          aumentando!{' '}
+          aumentando!{" "}
         </p>
         <p>
           Atualmente, trabalho como freelancer de desenvolvimento front-end e
-          procuro oportunidade para atuar diretamente na área.{' '}
+          procuro oportunidade para atuar diretamente na área.{" "}
         </p>
-      </div>
+      </C.TextAboutArea>
       <Subtitle subtitle="Técnologias com que trabalho:" />
       <ul>
         <div>

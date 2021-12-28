@@ -5,6 +5,7 @@ import MainSection from "./Components/MainSection";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
+import Contacts from "./Components/Contacts";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <MainSection />
       <About />
       <Projects />
+      <Contacts />
       <Footer />
     </>
   );
