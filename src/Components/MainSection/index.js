@@ -1,11 +1,11 @@
-import React from 'react';
-import * as C from './styles';
+import React from "react";
+import * as C from "./styles";
 import {
   LogoGithub,
   LogoLinkedin,
   LogoInstagram,
-  LogoWhatsapp,
-} from 'react-ionicons';
+  LogoWhatsapp
+} from "react-ionicons";
 
 const MainSection = () => {
   return (
@@ -15,7 +15,6 @@ const MainSection = () => {
       </C.Column1>
       <C.Column2>
         <C.InitialTitle>
-          <div></div>
           <h2>olá, me chamo</h2>
         </C.InitialTitle>
         <C.MainTitle>

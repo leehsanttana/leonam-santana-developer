@@ -1,84 +1,79 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MainSection = styled.section`
   padding: 60px 160px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  position: relative;
 `;
 
 export const Column1 = styled.div`
-
-  .mainImage{
-    width: 450px;
-    height: 540px;
+  .mainImage {
+    width: 100%;
+    height: 640px;
     background: var(--purple);
     border-radius: 100px 20px 200px 20px;
     transform: rotate(5deg);
   }
-
-
 `;
 
 export const Column2 = styled.div`
-
-  position: absolute;
-  right: 250px;
   z-index: 1000;
-
 `;
 
 export const InitialTitle = styled.div`
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 
-  div{
-    width: 330px;
-    height: 2px;
-    background: var(--white);
-  }
-
-  h2{
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 2.25rem;
     text-transform: uppercase;
     font-weight: 500;
-  }
 
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 330px;
+      height: 2px;
+      margin-left: 1.8rem;
+      background: var(--white);
+    }
+  }
 `;
 
 export const MainTitle = styled.div`
-  h1{
+  h1 {
     font-size: 4.5rem;
     text-transform: uppercase;
+    text-align: right;
   }
 `;
 
 export const MainSubtitle = styled.div`
-  h2{
+  h2 {
     text-transform: uppercase;
     font-weight: 300;
+    margin-left: 1.8rem;
   }
 `;
 
 export const SocialLinks = styled.ul`
-
   margin-top: 2rem;
   display: flex;
   list-style-type: none;
   gap: 1.5rem;
   justify-content: flex-end;
 
-  .icons{
+  .icons {
     width: 35px;
     height: 35px;
     fill: var(--white);
-    transition: .4s ease;
+    transition: 0.4s ease;
   }
 
-  a:hover .icons{
+  a:hover .icons {
     fill: var(--purple);
     transform: scale(0.9);
   }
