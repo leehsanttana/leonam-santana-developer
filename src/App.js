@@ -1,10 +1,16 @@
-import "./styles.css";
+import React from "react";
+import "./MainStyle.css";
+import Header from "./Components/Header";
+import MainSection from "./Components/MainSection";
+import Footer from "./Components/Footer";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <>
+      <Header />
+      <MainSection />
+
+      <Footer />
+    </>
   );
 }

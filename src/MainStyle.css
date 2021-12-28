@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  --purple: #7631bb;
+  --dark-purple: #190f29;
+  --cyan: #11c4ed;
+  --cyan-hover: #0faacd;
+  --white: #f2f2f2;
+}
+
+body {
+  background: var(--dark-purple);
+  color: var(--white);
+}
+
+h1,
+h2 {
+  letter-spacing: 0.095rem;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+  margin-top: 1.5rem;
+  max-width: 60%;
+  line-height: 1.4;
+}
+
+button {
+  font-weight: 400;
+}
+
+a {
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+}
