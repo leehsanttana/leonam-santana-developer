@@ -32,14 +32,14 @@ export const TextAboutArea = styled.section`
   margin-bottom: 40px;
 
   p {
+    max-width: 60%;
+
     &:first-child::before {
       content: "<p> ";
     }
-
     &:last-child::after {
       content: " </p>";
     }
-
     &:first-child::before,
     &:last-child::after {
       color: var(--cyan);

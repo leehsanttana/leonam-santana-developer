@@ -1,5 +1,5 @@
-import React from 'react';
-import * as C from './styles';
+import React from "react";
+import * as C from "./styles";
 
 const Title = ({ title }) => {
   return (

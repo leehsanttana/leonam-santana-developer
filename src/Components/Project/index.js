@@ -3,7 +3,7 @@ import * as C from "./styles";
 import Subtitle from "../Elements/Subtitle";
 import Button from "../Elements/Button";
 
-const Project = ({ href, setActiveModal }) => {
+const Project = ({ setActiveModal }) => {
   function handleClick() {
     setActiveModal(true);
   }

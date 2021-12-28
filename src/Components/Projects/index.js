@@ -15,7 +15,7 @@ const Projects = () => {
         <Project setActiveModal={setActiveModal} />
         <Project setActiveModal={setActiveModal} />
       </C.ListProjects>
-      <ModalProject activeModal={activeModal} />
+      <ModalProject activeModal={activeModal} setActiveModal={setActiveModal} />
     </C.Projects>
   );
 };

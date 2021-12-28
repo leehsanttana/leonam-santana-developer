@@ -1,8 +1,9 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   --purple: #7631bb;
+  --modal-purple: #360964;
   --dark-purple: #190f29;
   --cyan: #11c4ed;
   --cyan-hover: #0faacd;
@@ -30,7 +31,6 @@ h2 {
 p {
   font-weight: 300;
   margin-top: 1.5rem;
-  max-width: 60%;
   line-height: 1.4;
 }
 

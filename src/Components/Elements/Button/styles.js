@@ -10,6 +10,7 @@ export const Button = styled.button`
   border: none;
   color: var(--white);
   font-size: 1.1rem;
+  cursor: pointer;
 
   &:hover {
     transform: scale(0.935);

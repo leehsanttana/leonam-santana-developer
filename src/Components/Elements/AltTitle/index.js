@@ -1,7 +1,7 @@
-import React from 'react';
-import * as C from './styles';
+import React from "react";
+import * as C from "./styles";
 
-const AltTitle = ({ title }) => {
+const AltTitle = ({ title, ...props }) => {
   return (
     <C.AltTitle>
       <div></div>
