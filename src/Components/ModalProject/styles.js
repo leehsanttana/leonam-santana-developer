@@ -31,10 +31,9 @@ export const TitleProject = styled.div`
 `;
 
 export const Column1 = styled.section`
-  div {
+  img {
     width: 100%;
     height: 600px;
-    background: #ccc;
   }
 `;
 
@@ -45,7 +44,7 @@ export const Column2 = styled.section`
 
   p {
     text-align: right;
-    margin-top: 1.5rem;
+    margin-top: -0.5rem;
 
     &::before {
       content: "<p> ";

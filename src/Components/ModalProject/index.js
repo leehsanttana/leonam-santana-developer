@@ -1,45 +1,44 @@
 import React from "react";
 import * as C from "./styles";
 import Button from "../Elements/Button";
-import Subtitle from "../Elements/Subtitle";
 import AltTitle from "../Elements/AltTitle";
 import LinkButton from "../Elements/LinkButton";
 import NextButton from "../Elements/NextButton";
 import { LogoGithub, Link } from "react-ionicons";
 
-const ModalProject = ({ activeModal, setActiveModal }) => {
+const ModalProject = ({ project, setActiveModal }) => {
   function handleClick() {
     setActiveModal(null);
   }
 
-  if (activeModal === true) {
+  if (project !== null) {
     return (
       <C.ModalProject>
         <C.ModalProjectWrapper>
           <C.TitleProject>
-            <AltTitle title="Nome do projeto" />
+            <AltTitle title={project.name} />
           </C.TitleProject>
           <C.Column1>
-            <div></div>
+            <img src={project.image} alt={project.name} />
           </C.Column1>
           <C.Column2>
-            <Subtitle subtitle="Nome do Projeto"></Subtitle>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
-            </p>
+            <p>{project.description}</p>
             <C.SocialLinks>
               <li>
                 <LinkButton
-                  href="https://github.com/leehsanttana"
+                  href={project.linkRepository}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <LogoGithub cssClasses="icons" />
                 </LinkButton>
               </li>
               <li>
-                <LinkButton href="#" target="_blank">
+                <LinkButton
+                  href={project.linkProject}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Link cssClasses="icons" />
                 </LinkButton>
               </li>
