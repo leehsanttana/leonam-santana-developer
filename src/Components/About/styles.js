@@ -3,6 +3,18 @@ import styled from "styled-components";
 export const About = styled.section`
   padding: 50px 160px;
 
+  @media only screen and (max-width: 992px) {
+    padding: 50px 80px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 30px 50px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 30px;
+  }
+
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,6 +38,13 @@ export const About = styled.section`
   button {
     margin-top: 2.5rem;
   }
+
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
 `;
 
 export const TextAboutArea = styled.section`
@@ -43,6 +62,10 @@ export const TextAboutArea = styled.section`
     &:first-child::before,
     &:last-child::after {
       color: var(--cyan);
+    }
+
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
     }
   }
 `;

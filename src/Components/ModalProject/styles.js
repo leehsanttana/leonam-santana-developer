@@ -33,7 +33,7 @@ export const TitleProject = styled.div`
 export const Column1 = styled.section`
   img {
     width: 100%;
-    height: 600px;
+    height: auto;
   }
 `;
 
@@ -70,7 +70,6 @@ export const SocialLinks = styled.section`
 `;
 
 export const ButtonNext = styled.section`
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 2.5rem;
+  grid-column: 1 / 3;
+  justify-self: end;
 `;

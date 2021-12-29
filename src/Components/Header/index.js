@@ -11,23 +11,20 @@ const Header = () => {
       <C.Nav>
         <ul>
           <li>
-            {" "}
             <a href="">home</a>{" "}
           </li>
           <li>
-            {" "}
             <a href="">sobre</a>{" "}
           </li>
           <li>
-            {" "}
             <a href="">portfolio</a>{" "}
           </li>
           <li>
-            {" "}
             <a href="">contatos</a>{" "}
           </li>
         </ul>
       </C.Nav>
+      <button>x</button>
     </C.Header>
   );
 };

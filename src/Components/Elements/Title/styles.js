@@ -32,4 +32,8 @@ export const Title = styled.div`
     height: 2px;
     background: var(--cyan);
   }
+
+  @media screen and (max-width: 600px) {
+    gap: 2rem;
+  }
 `;

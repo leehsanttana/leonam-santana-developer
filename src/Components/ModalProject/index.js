@@ -44,10 +44,10 @@ const ModalProject = ({ project, setActiveModal }) => {
               </li>
             </C.SocialLinks>
             <Button onClick={handleClick}>Fechar</Button>
-            <C.ButtonNext>
-              <NextButton />
-            </C.ButtonNext>
           </C.Column2>
+          <C.ButtonNext>
+            <NextButton />
+          </C.ButtonNext>
         </C.ModalProjectWrapper>
       </C.ModalProject>
     );

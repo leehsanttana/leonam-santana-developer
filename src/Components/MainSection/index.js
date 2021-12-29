@@ -1,5 +1,6 @@
 import React from "react";
 import * as C from "./styles";
+import foto from "../../Assets/column1.png";
 import {
   LogoGithub,
   LogoLinkedin,
@@ -12,7 +13,7 @@ const MainSection = () => {
   return (
     <C.MainSection>
       <C.Column1>
-        <div className="mainImage"></div>
+        <img src={foto} alt="Leonam Santana Developer" />
       </C.Column1>
       <C.Column2>
         <C.InitialTitle>
