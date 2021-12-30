@@ -48,7 +48,7 @@ export const InitialTitle = styled.div`
     &::before {
       content: "";
       display: inline-block;
-      width: 330px;
+      width: 160px;
       height: 2px;
       margin-left: 1.8rem;
       background: var(--white);
@@ -92,7 +92,7 @@ export const InitialTitle = styled.div`
 
 export const MainTitle = styled.div`
   h1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     text-align: right;
 

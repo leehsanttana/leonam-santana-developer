@@ -19,10 +19,39 @@ export const Header = styled.header`
   }
 
   button {
-    display: none;
+    height: 40px;
+    border: ${(props) => (props.active ? "none" : "2px solid var(--purple)")};
+    padding: 0.6rem 0.3rem;
+    background: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease;
 
-    @media only screen and (max-width: 768px) {
-      display: block;
+    div {
+      width: 30px;
+      height: 2px;
+      background: ${(props) => (props.active ? "none" : "var(--purple)")};
+      transition: 0.3s ease;
+
+      &:nth-child(2n + 1) {
+        background: ${(props) =>
+          props.active ? "var(--cyan)" : "var(--purple)"};
+      }
+
+      &:first-child {
+        transform: ${(props) => (props.active ? "rotate(45deg)" : "none")};
+        position: relative;
+        top: ${(props) => (props.active ? "9px" : "none")};
+      }
+
+      &:last-child {
+        transform: ${(props) => (props.active ? "rotate(-45deg)" : "none")};
+        position: relative;
+        top: ${(props) => (props.active ? "-9px" : "none")};
+      }
     }
   }
 `;
@@ -77,7 +106,37 @@ export const Nav = styled.nav`
 
   @media only screen and (max-width: 768px) {
     ul {
-      display: block;
+      flex-direction: column;
+      background: var(--modal-purple);
+      position: fixed;
+      right: ${(props) => (props.active ? "0" : "-100%")};
+      top: 0;
+      left: ${(props) => (props.active ? "0" : "100%")};
+      height: 100%;
+      transition: 0.3s ease-in-out;
+      z-index: 2000;
+      padding: 30px 50px;
+
+      li {
+        margin-top: 4rem;
+        margin-left: -1.25rem;
+        text-align: center;
+
+        &:hover {
+          margin-left: 0;
+        }
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        align-items: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
     }
   }
 `;
