@@ -4,7 +4,7 @@ export const Title = styled.div`
   margin: 40px 0;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 6rem;
+  gap: 3rem;
   align-items: center;
   justify-content: space-between;
   width: 100%;
