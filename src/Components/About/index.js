@@ -6,7 +6,7 @@ import Button from "../Elements/Button";
 
 const About = () => {
   return (
-    <C.About>
+    <C.About id="about">
       <Title title="Sobre" />
       <C.TextAboutArea>
         <p>

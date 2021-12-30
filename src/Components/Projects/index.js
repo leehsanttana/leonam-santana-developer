@@ -90,7 +90,7 @@ const projects = [
 const Projects = () => {
   const [activeModal, setActiveModal] = useState(null);
   return (
-    <C.Projects>
+    <C.Projects id="projects">
       {activeModal && (
         <ModalProject project={activeModal} setActiveModal={setActiveModal} />
       )}

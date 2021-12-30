@@ -109,6 +109,7 @@ export const Nav = styled.nav`
       flex-direction: column;
       background: var(--modal-purple);
       position: fixed;
+      opacity: ${(props) => (props.active ? "1" : "0")};
       right: ${(props) => (props.active ? "0" : "-100%")};
       top: 0;
       left: ${(props) => (props.active ? "0" : "100%")};

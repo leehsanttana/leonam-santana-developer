@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   return (
-    <C.Header active={activeMenu}>
+    <C.Header active={activeMenu} id="home">
       <C.Brand>
         <img src={logo} alt="Leonam Santana" />
       </C.Brand>
@@ -29,16 +29,24 @@ const Header = () => {
             </div>
           )}
           <li>
-            <a href="">home</a>{" "}
+            <a href="#home" onClick={handleClick}>
+              home
+            </a>
           </li>
           <li>
-            <a href="">sobre</a>{" "}
+            <a href="#about" onClick={handleClick}>
+              sobre
+            </a>
           </li>
           <li>
-            <a href="">portfolio</a>{" "}
+            <a href="#projects" onClick={handleClick}>
+              portfolio
+            </a>
           </li>
           <li>
-            <a href="">contatos</a>{" "}
+            <a href="#contacts" onClick={handleClick}>
+              contatos
+            </a>
           </li>
         </ul>
       </C.Nav>

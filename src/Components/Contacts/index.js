@@ -12,7 +12,7 @@ import LinkButton from "../Elements/LinkButton";
 
 const Contacts = () => {
   return (
-    <C.Contacts>
+    <C.Contacts id="contacts">
       <Title title="Contatos" />
       <Subtitle subtitle="Vamos nos Conectar!" />
       <p>Entre em contato comigo através das minhas redes sociais:</p>
