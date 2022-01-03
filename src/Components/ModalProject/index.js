@@ -2,7 +2,7 @@ import React from "react";
 import * as C from "./styles";
 import Button from "../Elements/Button";
 import AltTitle from "../Elements/AltTitle";
-import LinkButton from "../Elements/LinkButton";
+import ExternalLink from "../Elements/ExternalLink";
 import NextButton from "../Elements/NextButton";
 import { LogoGithub, Link } from "react-ionicons";
 
@@ -25,22 +25,22 @@ const ModalProject = ({ project, setActiveModal }) => {
             <p>{project.description}</p>
             <C.SocialLinks>
               <li>
-                <LinkButton
+                <ExternalLink
                   href={project.linkRepository}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <LogoGithub cssClasses="icons" />
-                </LinkButton>
+                </ExternalLink>
               </li>
               <li>
-                <LinkButton
+                <ExternalLink
                   href={project.linkProject}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Link cssClasses="icons" />
-                </LinkButton>
+                </ExternalLink>
               </li>
             </C.SocialLinks>
             <Button onClick={handleClick}>Fechar</Button>

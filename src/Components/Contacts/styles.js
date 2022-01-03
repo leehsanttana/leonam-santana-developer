@@ -14,6 +14,19 @@ export const Contacts = styled.section`
   @media only screen and (max-width: 480px) {
     padding: 30px;
   }
+
+  p {
+    &::before {
+      content: "<p> ";
+    }
+    &::after {
+      content: " </p>";
+    }
+    &::before,
+    &::after {
+      color: var(--cyan);
+    }
+  }
 `;
 
 export const SocialLinks = styled.ul`

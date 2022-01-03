@@ -1,12 +1,12 @@
-import React from "react";
+import { React, forwardRef } from "react";
 import * as C from "./styles";
 import Title from "../Elements/Title";
 import Subtitle from "../Elements/Subtitle";
 import Button from "../Elements/Button";
 
-const About = () => {
+const About = forwardRef((props, ref) => {
   return (
-    <C.About id="about">
+    <C.About ref={ref} {...props}>
       <Title title="Sobre" />
       <C.TextAboutArea>
         <p>
@@ -27,7 +27,7 @@ const About = () => {
           procuro oportunidade para atuar diretamente na área.{" "}
         </p>
       </C.TextAboutArea>
-      <Subtitle subtitle="Técnologias com que trabalho:" />
+      <Subtitle subtitle="Técnologias que trabalho:" />
       <ul>
         <div>
           <li>HTML5</li>
@@ -43,6 +43,6 @@ const About = () => {
       <Button>Veja meus projetos</Button>
     </C.About>
   );
-};
+});
 
 export default About;

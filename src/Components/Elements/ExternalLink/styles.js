@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LinkButton = styled.a`
+export const ExternalLink = styled.a`
   padding: 1.24rem 1rem;
   text-transform: capitalize;
   font-weight: 500;

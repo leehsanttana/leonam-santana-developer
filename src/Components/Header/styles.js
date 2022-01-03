@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 1.25rem 160px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3000;
 
   @media only screen and (max-width: 992px) {
     padding: 1.25rem 80px;

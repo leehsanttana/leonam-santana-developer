@@ -1,4 +1,4 @@
-import React from "react";
+import { React, forwardRef } from "react";
 import * as C from "./styles";
 import Title from "../Elements/Title";
 import Subtitle from "../Elements/Subtitle";
@@ -8,48 +8,48 @@ import {
   LogoInstagram,
   LogoWhatsapp
 } from "react-ionicons";
-import LinkButton from "../Elements/LinkButton";
+import ExternalLink from "../Elements/ExternalLink";
 
-const Contacts = () => {
+const Contacts = forwardRef((props, ref) => {
   return (
-    <C.Contacts id="contacts">
+    <C.Contacts ref={ref} {...props}>
       <Title title="Contatos" />
       <Subtitle subtitle="Vamos nos Conectar!" />
       <p>Entre em contato comigo através das minhas redes sociais:</p>
 
       <C.SocialLinks>
         <li>
-          <LinkButton href="https://github.com/leehsanttana" target="_blank">
+          <ExternalLink href="https://github.com/leehsanttana" target="_blank">
             <LogoGithub cssClasses="icons" />
-          </LinkButton>
+          </ExternalLink>
         </li>
         <li>
-          <LinkButton
+          <ExternalLink
             href="https://www.linkedin.com/in/leonam-santana-5352a61b3/"
             target="_blank"
           >
             <LogoLinkedin cssClasses="icons" />
-          </LinkButton>
+          </ExternalLink>
         </li>
         <li>
-          <LinkButton
+          <ExternalLink
             href="https://instagram.com/leonam.santtana?igshid=s2debj44nc6v"
             target="_blank"
           >
             <LogoInstagram cssClasses="icons" />
-          </LinkButton>
+          </ExternalLink>
         </li>
         <li>
-          <LinkButton
+          <ExternalLink
             href="https://api.whatsapp.com/send?phone=5521976370007"
             target="_blank"
           >
             <LogoWhatsapp cssClasses="icons" />
-          </LinkButton>
+          </ExternalLink>
         </li>
       </C.SocialLinks>
     </C.Contacts>
   );
-};
+});
 
 export default Contacts;

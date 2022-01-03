@@ -1,18 +1,34 @@
-import { React, useState } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import * as C from "./styles";
 import logo from "../../Assets/logo.png";
 import useMedia from "../../Hooks/useMedia";
+import InternalLink from "../Elements/InternalLink";
 
-const Header = () => {
+const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
   const mobile = useMedia("(max-width: 768px)");
   const [activeMenu, setActivemenu] = useState(false);
+  const [changeColor, setChangeColor] = useState(null);
+
+  const refHeader = useRef();
+
+  useEffect(() => {
+    function changeBgColor() {
+      if (
+        window.pageYOffset > refHeader.current.getBoundingClientRect().height
+      ) {
+        setChangeColor(changeColor);
+      }
+    }
+
+    window.addEventListener("scroll", changeBgColor);
+  }, []);
 
   function handleClick() {
     setActivemenu(!activeMenu);
   }
 
   return (
-    <C.Header active={activeMenu} id="home">
+    <C.Header active={activeMenu} linkAbout={linkAbout} ref={refHeader}>
       <C.Brand>
         <img src={logo} alt="Leonam Santana" />
       </C.Brand>
@@ -29,24 +45,44 @@ const Header = () => {
             </div>
           )}
           <li>
-            <a href="#home" onClick={handleClick}>
+            <InternalLink
+              href="#home"
+              activeMenu={activeMenu}
+              setActivemenu={setActivemenu}
+              linkRef={linkHome}
+            >
               home
-            </a>
+            </InternalLink>
           </li>
           <li>
-            <a href="#about" onClick={handleClick}>
+            <InternalLink
+              href="#about"
+              activeMenu={activeMenu}
+              setActivemenu={setActivemenu}
+              linkRef={linkAbout}
+            >
               sobre
-            </a>
+            </InternalLink>
           </li>
           <li>
-            <a href="#projects" onClick={handleClick}>
+            <InternalLink
+              href="#projects"
+              activeMenu={activeMenu}
+              setActivemenu={setActivemenu}
+              linkRef={linkProjects}
+            >
               portfolio
-            </a>
+            </InternalLink>
           </li>
           <li>
-            <a href="#contacts" onClick={handleClick}>
+            <InternalLink
+              href="#contacts"
+              activeMenu={activeMenu}
+              setActivemenu={setActivemenu}
+              linkRef={linkContacts}
+            >
               contatos
-            </a>
+            </InternalLink>
           </li>
         </ul>
       </C.Nav>

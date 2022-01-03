@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, forwardRef } from "react";
 import * as C from "./styles";
 import AltTitle from "../Elements/AltTitle";
 import Project from "../Project";
@@ -87,10 +87,10 @@ const projects = [
   }
 ];
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
   const [activeModal, setActiveModal] = useState(null);
   return (
-    <C.Projects id="projects">
+    <C.Projects ref={ref} {...props}>
       {activeModal && (
         <ModalProject project={activeModal} setActiveModal={setActiveModal} />
       )}
@@ -108,6 +108,6 @@ const Projects = () => {
       </C.ListProjects>
     </C.Projects>
   );
-};
+});
 
 export default Projects;
