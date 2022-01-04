@@ -13,10 +13,12 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
 
   useEffect(() => {
     function changeBgColor() {
+      setChangeColor(false);
       if (
-        window.pageYOffset > refHeader.current.getBoundingClientRect().height
+        window.pageYOffset >=
+        refHeader.current.getBoundingClientRect().height - 60
       ) {
-        setChangeColor(changeColor);
+        setChangeColor(true);
       }
     }
 
@@ -28,11 +30,16 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
   }
 
   return (
-    <C.Header active={activeMenu} linkAbout={linkAbout} ref={refHeader}>
-      <C.Brand>
+    <C.Header
+      changeColor={changeColor}
+      active={activeMenu}
+      linkAbout={linkAbout}
+      ref={refHeader}
+    >
+      <C.Brand changeColor={changeColor}>
         <img src={logo} alt="Leonam Santana" />
       </C.Brand>
-      <C.Nav active={activeMenu}>
+      <C.Nav active={activeMenu} changeColor={changeColor}>
         <ul>
           {mobile && (
             <div>

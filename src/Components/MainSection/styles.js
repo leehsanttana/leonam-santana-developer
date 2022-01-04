@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 export const MainSection = styled.section`
-  padding: 50px 160px;
+  padding: 100px 160px 50px 160px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
   @media only screen and (max-width: 992px) {
-    padding: 50px 80px;
+    padding: 100px 50px 80px 50px;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 30px 50px;
+    padding: 100px 30px 50px 30px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -19,7 +19,7 @@ export const MainSection = styled.section`
   }
 
   @media only screen and (max-width: 480px) {
-    padding: 30px;
+    padding: 100px 30px 30px 30px;
   }
 `;
 

@@ -5,11 +5,13 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  padding: 1.25rem 160px;
+  padding: 2rem 160px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 3000;
+  background: ${(props) => (props.changeColor ? "#190f29e1" : "none")};
+  transition: 0.5s ease;
 
   @media only screen and (max-width: 992px) {
     padding: 1.25rem 80px;
@@ -20,6 +22,7 @@ export const Header = styled.header`
   }
 
   @media only screen and (max-width: 480px) {
+    gap: 3rem;
     padding: 30px;
   }
 
@@ -33,7 +36,8 @@ export const Header = styled.header`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    transition: 0.3s ease;
+    transform: ${(props) => (props.changeColor ? "scale(0.9)" : "scale(1)")};
+    transition: 0.5s ease;
 
     div {
       width: 30px;
@@ -63,7 +67,9 @@ export const Header = styled.header`
 
 export const Brand = styled.div`
   img {
-    width: 100%;
+    max-width: 100%;
+    transform: ${(props) => (props.changeColor ? "scale(0.9)" : "scale(1)")};
+    transition: 0.5s ease;
   }
 `;
 
@@ -135,8 +141,8 @@ export const Nav = styled.nav`
 
       div {
         display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 1rem;
+        grid-template-columns: auto auto;
+        gap: 3rem;
         align-items: center;
 
         img {
