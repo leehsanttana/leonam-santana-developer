@@ -11,10 +11,10 @@ import ExternalLink from "../Elements/ExternalLink";
 
 const MainSection = forwardRef((props, ref) => {
   const [animate, setAnimate] = useState(null);
+
   useEffect(() => {
     setAnimate(true);
-    console.log(animate);
-  });
+  }, [animate]);
 
   return (
     <C.MainSection ref={ref} {...props}>

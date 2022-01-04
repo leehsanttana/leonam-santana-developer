@@ -12,6 +12,7 @@ export const Header = styled.header`
   z-index: 3000;
   background: ${(props) => (props.changeColor ? "#190f29e1" : "none")};
   transition: 0.5s ease;
+  opacity: 0;
 
   @media only screen and (max-width: 992px) {
     padding: 1.25rem 80px;

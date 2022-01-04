@@ -8,6 +8,7 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
   const mobile = useMedia("(max-width: 768px)");
   const [activeMenu, setActivemenu] = useState(false);
   const [changeColor, setChangeColor] = useState(null);
+  const [animate, setAnimate] = useState(null);
 
   const refHeader = useRef();
 
@@ -25,6 +26,10 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
     window.addEventListener("scroll", changeBgColor);
   }, []);
 
+  useEffect(() => {
+    setAnimate(true);
+  }, [animate]);
+
   function handleClick() {
     setActivemenu(!activeMenu);
   }
@@ -35,6 +40,7 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
       active={activeMenu}
       linkAbout={linkAbout}
       ref={refHeader}
+      className={animate ? "Header" : null}
     >
       <C.Brand changeColor={changeColor}>
         <img src={logo} alt="Leonam Santana" />
