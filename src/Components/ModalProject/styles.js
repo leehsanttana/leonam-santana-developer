@@ -34,8 +34,8 @@ export const ModalProjectWrapper = styled.div`
   }
 
   @media only screen and (max-width: 480px) {
-    margin: 30px;
-    padding: 1.5rem;
+    margin: 1rem;
+    padding: 1.125rem;
   }
 `;
 
@@ -104,6 +104,12 @@ export const Column2 = styled.section`
       text-align: left;
     }
   }
+
+  @media only screen and (max-width: 480px) {
+    button {
+      width: 100%;
+    }
+  }
 `;
 
 export const SocialLinks = styled.section`
@@ -122,9 +128,4 @@ export const SocialLinks = styled.section`
       padding: 0;
     }
   }
-`;
-
-export const ButtonNext = styled.section`
-  grid-column: 1 / 3;
-  justify-self: end;
 `;

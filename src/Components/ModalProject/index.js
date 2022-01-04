@@ -3,7 +3,6 @@ import * as C from "./styles";
 import Button from "../Elements/Button";
 import AltTitle from "../Elements/AltTitle";
 import ExternalLink from "../Elements/ExternalLink";
-import NextButton from "../Elements/NextButton";
 import { LogoGithub, Link } from "react-ionicons";
 
 const ModalProject = ({ project, setActiveModal }) => {
@@ -27,7 +26,6 @@ const ModalProject = ({ project, setActiveModal }) => {
               <li>
                 <ExternalLink
                   href={project.linkRepository}
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <LogoGithub cssClasses="icons" />
@@ -36,7 +34,6 @@ const ModalProject = ({ project, setActiveModal }) => {
               <li>
                 <ExternalLink
                   href={project.linkProject}
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Link cssClasses="icons" />
@@ -45,9 +42,6 @@ const ModalProject = ({ project, setActiveModal }) => {
             </C.SocialLinks>
             <Button onClick={handleClick}>Fechar</Button>
           </C.Column2>
-          <C.ButtonNext>
-            <NextButton />
-          </C.ButtonNext>
         </C.ModalProjectWrapper>
       </C.ModalProject>
     );

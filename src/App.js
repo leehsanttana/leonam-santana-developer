@@ -1,5 +1,6 @@
 import { React, useRef } from "react";
 import "./MainStyle.css";
+import "./Animations.css";
 import Header from "./Components/Header";
 import MainSection from "./Components/MainSection";
 import About from "./Components/About";

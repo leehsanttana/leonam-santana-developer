@@ -1,0 +1,33 @@
+.MainSectionCol1 {
+  opacity: 0;
+  animation: MainSectionCol1 1.5s ease 0.5s forwards;
+}
+
+@keyframes MainSectionCol1 {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.MainSectionCol2 {
+  opacity: 0;
+  animation: MainSectionCol2 1.5s ease 1s forwards;
+}
+
+@keyframes MainSectionCol2 {
+  from {
+    opacity: 0;
+    transform: translate(20px, 40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

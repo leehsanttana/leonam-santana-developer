@@ -19,31 +19,22 @@ const Contacts = forwardRef((props, ref) => {
 
       <C.SocialLinks>
         <li>
-          <ExternalLink href="https://github.com/leehsanttana" target="_blank">
+          <ExternalLink href="https://github.com/leehsanttana">
             <LogoGithub cssClasses="icons" />
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink
-            href="https://www.linkedin.com/in/leonam-santana-5352a61b3/"
-            target="_blank"
-          >
+          <ExternalLink href="https://www.linkedin.com/in/leonam-santana-5352a61b3/">
             <LogoLinkedin cssClasses="icons" />
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink
-            href="https://instagram.com/leonam.santtana?igshid=s2debj44nc6v"
-            target="_blank"
-          >
+          <ExternalLink href="https://instagram.com/leonam.santtana?igshid=s2debj44nc6v">
             <LogoInstagram cssClasses="icons" />
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink
-            href="https://api.whatsapp.com/send?phone=5521976370007"
-            target="_blank"
-          >
+          <ExternalLink href="https://api.whatsapp.com/send?phone=5521976370007">
             <LogoWhatsapp cssClasses="icons" />
           </ExternalLink>
         </li>
