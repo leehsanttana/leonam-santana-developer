@@ -16,7 +16,7 @@ const Project = ({ setActiveModal, project }) => {
           <Button onClick={handleClick}>Veja +</Button>
         </div>
       </C.ProjectWrapper>
-      <Subtitle subtitle="Nome do Projeto:" />
+      <Subtitle subtitle={project.name} />
     </C.Project>
   );
 };

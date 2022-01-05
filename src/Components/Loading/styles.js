@@ -7,8 +7,18 @@ export const Loading = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: ${(props) => (props.loading ? "1" : "0")};
   transition: 1s ease;
+  animation: hideLoading 1s ease 2s forwards;
+
+  @keyframes hideLoading {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
 
   div {
     width: 100px;
@@ -16,7 +26,7 @@ export const Loading = styled.section`
     border: 5px solid #0faacd;
     transform: rotate(45deg);
     background: transparent;
-    animation: fluidColor 2s ease forwards infinite;
+    animation: fluidColor 4s forwards infinite;
 
     @keyframes fluidColor {
       0% {
@@ -24,7 +34,7 @@ export const Loading = styled.section`
       }
 
       100% {
-        transform: rotate(135deg);
+        transform: rotate(225deg);
       }
     }
   }

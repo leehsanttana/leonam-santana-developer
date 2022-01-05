@@ -121,11 +121,11 @@ export const Nav = styled.nav`
       flex-direction: column;
       background: var(--modal-purple);
       position: fixed;
+      top: 0;
       opacity: ${(props) => (props.active ? "1" : "0")};
       right: ${(props) => (props.active ? "0" : "-100%")};
-      top: 0;
       left: ${(props) => (props.active ? "0" : "100%")};
-      height: 100%;
+      height: 100vh;
       transition: 0.3s ease-in-out;
       z-index: 2000;
       padding: 30px 50px;

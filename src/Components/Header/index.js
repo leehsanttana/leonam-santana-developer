@@ -14,17 +14,15 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
 
   useEffect(() => {
     function changeBgColor() {
-      setChangeColor(false);
-      if (
-        window.pageYOffset >=
-        refHeader.current.getBoundingClientRect().height - 60
-      ) {
+      if (window.pageYOffset > 60) {
         setChangeColor(true);
+      } else {
+        setChangeColor(false);
       }
     }
 
     window.addEventListener("scroll", changeBgColor);
-  }, []);
+  }, [changeColor]);
 
   useEffect(() => {
     setAnimate(true);

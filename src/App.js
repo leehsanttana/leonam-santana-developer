@@ -19,12 +19,10 @@ const App = () => {
   useEffect(() => {
     if (document.readyState === "loading") {
       setLoading(true);
-      console.log(document.readyState, loading);
     } else {
       setTimeout(() => {
         setLoading(null);
-        console.log(document.readyState, loading);
-      }, 2000);
+      }, 3000);
     }
   }, [loading]);
 
