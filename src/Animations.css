@@ -50,3 +50,37 @@
     visibility: visible;
   }
 }
+
+.scrollRight {
+  animation: scrollRight 0.5s ease forwards;
+}
+
+@keyframes scrollRight {
+  from {
+    opacity: 0;
+    transform: translate(20px, 40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+}
+
+.scrollLeft {
+  animation: scrollLeft 0.5s ease forwards;
+}
+
+@keyframes scrollLeft {
+  from {
+    opacity: 0;
+    transform: translate(-20px, 40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+}

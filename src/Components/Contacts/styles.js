@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Contacts = styled.section`
+  visibility: hidden;
   padding: 50px 160px;
 
   @media only screen and (max-width: 992px) {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainSection = styled.section`
-  padding: 100px 160px 50px 160px;
+  padding: 120px 160px 50px 160px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;

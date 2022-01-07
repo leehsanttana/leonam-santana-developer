@@ -1,4 +1,4 @@
-import { React, useState, forwardRef } from "react";
+import { React, useState, forwardRef, useEffect } from "react";
 import * as C from "./styles";
 import AltTitle from "../Elements/AltTitle";
 import Project from "../Project";
@@ -89,8 +89,25 @@ const projects = [
 
 const Projects = forwardRef((props, ref) => {
   const [activeModal, setActiveModal] = useState(null);
+  const [scrollAnimate, setScrollAnimate] = useState(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      const sectionPosition = ref.current.getBoundingClientRect().top - 400;
+
+      if (sectionPosition < 0) {
+        setScrollAnimate(true);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+  }, [ref]);
   return (
-    <C.Projects ref={ref} {...props}>
+    <C.Projects
+      ref={ref}
+      {...props}
+      className={scrollAnimate ? "scrollLeft" : "none"}
+    >
       {activeModal && (
         <ModalProject project={activeModal} setActiveModal={setActiveModal} />
       )}

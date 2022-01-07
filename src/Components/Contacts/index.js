@@ -1,4 +1,4 @@
-import { React, forwardRef } from "react";
+import { React, forwardRef, useEffect, useState } from "react";
 import * as C from "./styles";
 import Title from "../Elements/Title";
 import Subtitle from "../Elements/Subtitle";
@@ -11,8 +11,25 @@ import {
 import ExternalLink from "../Elements/ExternalLink";
 
 const Contacts = forwardRef((props, ref) => {
+  const [scrollAnimate, setScrollAnimate] = useState(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      const sectionPosition = ref.current.getBoundingClientRect().top - 400;
+
+      if (sectionPosition < 0) {
+        setScrollAnimate(true);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+  }, [ref]);
   return (
-    <C.Contacts ref={ref} {...props}>
+    <C.Contacts
+      ref={ref}
+      {...props}
+      className={scrollAnimate ? "scrollRight" : "none"}
+    >
       <Title title="Contatos" />
       <Subtitle subtitle="Vamos nos Conectar!" />
       <p>Entre em contato comigo através das minhas redes sociais:</p>

@@ -9,6 +9,7 @@ export const Loading = styled.section`
   align-items: center;
   transition: 1s ease;
   animation: hideLoading 1s ease 1s forwards;
+  position: relative;
 
   @keyframes hideLoading {
     0% {
@@ -26,15 +27,32 @@ export const Loading = styled.section`
     border: 5px solid #0faacd;
     transform: rotate(45deg);
     background: transparent;
-    animation: fluidColor 0.8s forwards infinite;
+    animation: rotateSquare 1s linear forwards infinite;
 
-    @keyframes fluidColor {
+    @keyframes rotateSquare {
       0% {
         transform: rotate(45deg);
       }
 
       100% {
         transform: rotate(225deg);
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    transform: scale(0.9);
+    animation: pulseLogo 0.8s ease forwards infinite alternate;
+
+    @keyframes pulseLogo {
+      0% {
+        transform: scale(0.8);
+      }
+
+      100% {
+        transform: scaleX(1);
+        transform: scaleY(1.1);
       }
     }
   }

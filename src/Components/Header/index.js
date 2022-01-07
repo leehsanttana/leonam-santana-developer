@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useRef } from "react";
+import { React, useState, useEffect } from "react";
 import * as C from "./styles";
 import logo from "../../Assets/logo.png";
 import useMedia from "../../Hooks/useMedia";
@@ -9,8 +9,6 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
   const [activeMenu, setActivemenu] = useState(false);
   const [changeColor, setChangeColor] = useState(null);
   const [animate, setAnimate] = useState(null);
-
-  const refHeader = useRef();
 
   useEffect(() => {
     function changeBgColor() {
@@ -37,7 +35,6 @@ const Header = ({ linkHome, linkAbout, linkProjects, linkContacts }) => {
       changeColor={changeColor}
       active={activeMenu}
       linkAbout={linkAbout}
-      ref={refHeader}
       className={animate ? "Header" : null}
     >
       <C.Brand changeColor={changeColor}>
