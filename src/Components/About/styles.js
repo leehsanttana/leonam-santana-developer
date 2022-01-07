@@ -36,8 +36,22 @@ export const About = styled.section`
     }
   }
 
-  button {
+  a {
     margin-top: 2.5rem;
+    background: var(--cyan);
+    padding: 1.24rem 4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: inline-block;
+    transition: 0.5s ease-in-out;
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(0.935);
+    }
   }
 
   @media screen and (max-width: 480px) {

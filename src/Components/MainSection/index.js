@@ -1,4 +1,4 @@
-import { React, forwardRef, useEffect, useState } from "react";
+import { React, forwardRef, useEffect } from "react";
 import * as C from "./styles";
 import foto from "../../Assets/column1.png";
 import {
@@ -12,7 +12,7 @@ import ExternalLink from "../Elements/ExternalLink";
 const MainSection = forwardRef(({ animate, setAnimate }, ref) => {
   useEffect(() => {
     setAnimate(true);
-  }, [animate]);
+  }, []);
 
   return (
     <C.MainSection ref={ref} animate={animate}>

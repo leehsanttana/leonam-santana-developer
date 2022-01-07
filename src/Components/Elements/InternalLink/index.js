@@ -18,7 +18,7 @@ const InternalLink = ({
         behavior: "smooth"
       });
     }
-    const to = linkRef.current.offsetTop;
+    const to = linkRef.current.offsetTop - 50;
     scrollToPosition(to);
   }
 

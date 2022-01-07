@@ -87,8 +87,7 @@ const projects = [
   }
 ];
 
-const Projects = forwardRef((props, ref) => {
-  const [activeModal, setActiveModal] = useState(null);
+const Projects = forwardRef(({ setActiveModal }, ref) => {
   const [scrollAnimate, setScrollAnimate] = useState(null);
 
   useEffect(() => {
@@ -103,14 +102,7 @@ const Projects = forwardRef((props, ref) => {
     window.addEventListener("scroll", handleScroll);
   }, [ref]);
   return (
-    <C.Projects
-      ref={ref}
-      {...props}
-      className={scrollAnimate ? "scrollLeft" : "none"}
-    >
-      {activeModal && (
-        <ModalProject project={activeModal} setActiveModal={setActiveModal} />
-      )}
+    <C.Projects ref={ref} className={scrollAnimate ? "scrollLeft" : "none"}>
       <AltTitle title="projetos" />
       <C.ListProjects>
         {projects.map((project) => {

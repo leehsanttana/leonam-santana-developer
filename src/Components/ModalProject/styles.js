@@ -4,13 +4,26 @@ export const ModalProject = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100vh;
   z-index: 9999;
-  background: rgba(25, 15, 41, 0.6);
+  background: rgba(25, 15, 41, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: showModal 0.3s forwards;
+
+  @keyframes showModal {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const ModalProjectWrapper = styled.div`
@@ -23,6 +36,19 @@ export const ModalProjectWrapper = styled.div`
   border: 2px solid var(--purple);
   padding: 2.5rem;
   position: relative;
+  animation: showWrapper 0.3s forwards;
+
+  @keyframes showWrapper {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @media only screen and (max-width: 992px) {
     grid-template-columns: 1fr;
@@ -42,6 +68,7 @@ export const ModalProjectWrapper = styled.div`
 export const TitleProject = styled.div`
   grid-column: 1 / 3;
   margin-top: -40px;
+  margin-bottom: -20px;
 
   @media screen and (max-width: 768px) {
     div div {

@@ -12,7 +12,7 @@ const ModalProject = ({ project, setActiveModal }) => {
 
   if (project !== null) {
     return (
-      <C.ModalProject>
+      <C.ModalProject className={project ? "active" : ""}>
         <C.ModalProjectWrapper>
           <C.TitleProject>
             <AltTitle title={project.name} />

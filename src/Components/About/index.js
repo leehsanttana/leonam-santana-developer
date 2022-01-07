@@ -1,15 +1,18 @@
 import { React, forwardRef, useEffect, useState } from "react";
 import * as C from "./styles";
+import * as L from "../Elements/Button/styles";
 import Title from "../Elements/Title";
 import Subtitle from "../Elements/Subtitle";
 import Button from "../Elements/Button";
+import InternalLink from "../Elements/InternalLink";
 
-const About = forwardRef((props, ref) => {
+const About = forwardRef(({ LinkButton }, ref) => {
+  const [activeMenu, setActivemenu] = useState(false);
   const [scrollAnimate, setScrollAnimate] = useState(null);
 
   useEffect(() => {
     function handleScroll() {
-      const sectionPosition = ref.current.getBoundingClientRect().top - 400;
+      const sectionPosition = ref.current.getBoundingClientRect().top - 200;
 
       if (sectionPosition < 0) {
         setScrollAnimate(true);
@@ -20,11 +23,7 @@ const About = forwardRef((props, ref) => {
   }, [ref]);
 
   return (
-    <C.About
-      ref={ref}
-      {...props}
-      className={scrollAnimate ? "scrollRight" : "none"}
-    >
+    <C.About ref={ref} className={scrollAnimate ? "scrollRight" : "none"}>
       <Title title="Sobre" />
       <C.TextAboutArea>
         <p>
@@ -58,7 +57,14 @@ const About = forwardRef((props, ref) => {
           <li>Github</li>
         </div>
       </ul>
-      <Button>Veja meus projetos</Button>
+      <InternalLink
+        href="#projects"
+        activeMenu={activeMenu}
+        setActivemenu={setActivemenu}
+        linkRef={LinkButton}
+      >
+        Veja meus projetos
+      </InternalLink>
     </C.About>
   );
 });
