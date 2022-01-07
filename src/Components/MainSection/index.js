@@ -9,15 +9,13 @@ import {
 } from "react-ionicons";
 import ExternalLink from "../Elements/ExternalLink";
 
-const MainSection = forwardRef((props, ref) => {
-  const [animate, setAnimate] = useState(null);
-
+const MainSection = forwardRef(({ animate, setAnimate }, ref) => {
   useEffect(() => {
     setAnimate(true);
   }, [animate]);
 
   return (
-    <C.MainSection ref={ref} {...props}>
+    <C.MainSection ref={ref} animate={animate}>
       <C.Column1 className={animate ? "MainSectionCol1" : null}>
         <img src={foto} alt="Leonam Santana Developer" />
       </C.Column1>

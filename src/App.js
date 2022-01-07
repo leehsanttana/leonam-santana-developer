@@ -11,6 +11,7 @@ import Loading from "./Components/Loading";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [animate, setAnimate] = useState(null);
   const linkHome = useRef();
   const linkAbout = useRef();
   const linkProjects = useRef();
@@ -22,7 +23,7 @@ const App = () => {
     } else {
       setTimeout(() => {
         setLoading(null);
-      }, 3000);
+      }, 1000);
     }
   }, [loading]);
 
@@ -41,7 +42,7 @@ const App = () => {
           linkProjects={linkProjects}
           linkContacts={linkContacts}
         />
-        <MainSection ref={linkHome} />
+        <MainSection ref={linkHome} animate={animate} setAnimate={setAnimate} />
         <About ref={linkAbout} />
         <Projects ref={linkProjects} />
         <Contacts ref={linkContacts} />

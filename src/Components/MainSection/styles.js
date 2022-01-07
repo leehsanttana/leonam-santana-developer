@@ -5,6 +5,7 @@ export const MainSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  transition: 0.5s ease;
 
   @media only screen and (max-width: 992px) {
     padding: 100px 50px 80px 50px;
@@ -24,12 +25,16 @@ export const MainSection = styled.section`
 `;
 
 export const Column1 = styled.div`
+  opacity: 0;
+  visibility: hidden;
   img {
     width: 100%;
   }
 `;
 
 export const Column2 = styled.div`
+  opacity: 0;
+  visibility: hidden;
   z-index: 1000;
 `;
 

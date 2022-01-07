@@ -8,7 +8,7 @@ export const Loading = styled.section`
   justify-content: center;
   align-items: center;
   transition: 1s ease;
-  animation: hideLoading 1s ease 2s forwards;
+  animation: hideLoading 1s ease 1s forwards;
 
   @keyframes hideLoading {
     0% {
@@ -26,7 +26,7 @@ export const Loading = styled.section`
     border: 5px solid #0faacd;
     transform: rotate(45deg);
     background: transparent;
-    animation: fluidColor 4s forwards infinite;
+    animation: fluidColor 0.8s forwards infinite;
 
     @keyframes fluidColor {
       0% {
