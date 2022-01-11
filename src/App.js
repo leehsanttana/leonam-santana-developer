@@ -21,14 +21,18 @@ const App = () => {
   const linkContacts = useRef();
 
   useEffect(() => {
-    if (document.readyState !== "loading") {
-      setLoading(null);
-    }
+    setLoading(true);
+    setTimeout(() => {
+      if (document.readyState === "loading") {
+        setLoading(true);
+      } else {
+        setLoading(null);
+      }
+    }, 1000);
   }, []);
 
-  if (loading === true) {
-    return <Loading loading={loading} />;
-  } else
+  if (loading) return <Loading loading={loading} />;
+  else
     return (
       <>
         <Head />
