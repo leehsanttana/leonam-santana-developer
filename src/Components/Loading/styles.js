@@ -9,7 +9,7 @@ export const Loading = styled.section`
   align-items: center;
   transition: 1s ease;
   animation: ${(props) =>
-    props.loading ? "none" : "hideLoading 1s ease forwards"};
+    props.loading ? "hideLoading 1s ease forwards" : ""};
   position: fixed;
   z-index: 9999;
 
