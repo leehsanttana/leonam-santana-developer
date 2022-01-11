@@ -4,6 +4,7 @@ export const MainSection = styled.section`
   padding: 120px 160px 50px 160px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   align-items: center;
   transition: 0.5s ease;
 
@@ -12,7 +13,7 @@ export const MainSection = styled.section`
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 100px 30px 50px 30px;
+    padding: 100px 50px 50px;
   }
 
   @media only screen and (max-width: 600px) {

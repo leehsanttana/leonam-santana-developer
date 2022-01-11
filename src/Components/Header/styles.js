@@ -19,15 +19,16 @@ export const Header = styled.header`
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 30px 50px;
+    padding: 1.25rem 50px;
   }
 
   @media only screen and (max-width: 480px) {
     gap: 3rem;
-    padding: 30px;
+    padding: 1.25rem 30px;
   }
 
   button {
+    justify-self: end;
     height: 40px;
     border: ${(props) => (props.active ? "none" : "2px solid var(--purple)")};
     padding: 0.6rem 0.3rem;
@@ -70,6 +71,7 @@ export const Brand = styled.div`
   img {
     max-width: 100%;
     transform: ${(props) => (props.changeColor ? "scale(0.9)" : "scale(1)")};
+    margin-left: ${(props) => (props.changeColor ? "-1rem" : "0")};
     transition: 0.5s ease;
   }
 `;
@@ -128,7 +130,7 @@ export const Nav = styled.nav`
       height: 100vh;
       transition: 0.3s ease-in-out;
       z-index: 2000;
-      padding: 30px 50px;
+      padding: 1.25rem 50px;
 
       li {
         margin-top: 4rem;
@@ -150,6 +152,12 @@ export const Nav = styled.nav`
           max-width: 100%;
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    ul {
+      padding: 1.25rem 30px;
     }
   }
 `;
