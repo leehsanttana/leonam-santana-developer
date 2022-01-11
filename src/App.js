@@ -9,6 +9,7 @@ import ModalProject from "./Components/ModalProject";
 import Footer from "./Components/Footer";
 import Contacts from "./Components/Contacts";
 import Loading from "./Components/Loading";
+import Head from "./Components/Head";
 
 const App = () => {
   const [activeModal, setActiveModal] = useState(null);
@@ -23,35 +24,28 @@ const App = () => {
     if (document.readyState === "loading") {
       setLoading(true);
     } else {
-      setTimeout(() => {
-        setLoading(null);
-      }, 1000);
+      setLoading(null);
     }
-  }, [loading]);
+  }, []);
 
-  if (loading !== null) {
-    return (
-      <>
-        <Loading loading={loading} />
-      </>
-    );
-  } else
-    return (
-      <>
-        <Header
-          linkHome={linkHome}
-          linkAbout={linkAbout}
-          linkProjects={linkProjects}
-          linkContacts={linkContacts}
-        />
-        <MainSection ref={linkHome} animate={animate} setAnimate={setAnimate} />
-        <About ref={linkAbout} LinkButton={linkProjects} />
-        <Projects ref={linkProjects} setActiveModal={setActiveModal} />
-        <ModalProject project={activeModal} setActiveModal={setActiveModal} />
-        <Contacts ref={linkContacts} />
-        <Footer />
-      </>
-    );
+  return (
+    <>
+      {document.readyState === "loading" ? <Loading loading={loading} /> : null}
+      <Head />
+      <Header
+        linkHome={linkHome}
+        linkAbout={linkAbout}
+        linkProjects={linkProjects}
+        linkContacts={linkContacts}
+      />
+      <MainSection ref={linkHome} animate={animate} setAnimate={setAnimate} />
+      <About ref={linkAbout} LinkButton={linkProjects} />
+      <Projects ref={linkProjects} setActiveModal={setActiveModal} />
+      <ModalProject project={activeModal} setActiveModal={setActiveModal} />
+      <Contacts ref={linkContacts} />
+      <Footer />
+    </>
+  );
 };
 
 export default App;

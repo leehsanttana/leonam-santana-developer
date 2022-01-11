@@ -8,8 +8,9 @@ export const Loading = styled.section`
   justify-content: center;
   align-items: center;
   transition: 1s ease;
-  animation: hideLoading 1s ease 1s forwards;
-  position: relative;
+  animation: ${(props) =>
+    props.loading ? "hideLoading 1s ease 1s forwards" : "none"};
+  position: fixed;
 
   @keyframes hideLoading {
     0% {
