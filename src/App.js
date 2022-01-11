@@ -21,31 +21,31 @@ const App = () => {
   const linkContacts = useRef();
 
   useEffect(() => {
-    if (document.readyState === "loading") {
-      setLoading(true);
-    } else {
+    if (document.readyState !== "loading") {
       setLoading(null);
     }
   }, []);
 
-  return (
-    <>
-      {document.readyState === "loading" ? <Loading loading={loading} /> : null}
-      <Head />
-      <Header
-        linkHome={linkHome}
-        linkAbout={linkAbout}
-        linkProjects={linkProjects}
-        linkContacts={linkContacts}
-      />
-      <MainSection ref={linkHome} animate={animate} setAnimate={setAnimate} />
-      <About ref={linkAbout} LinkButton={linkProjects} />
-      <Projects ref={linkProjects} setActiveModal={setActiveModal} />
-      <ModalProject project={activeModal} setActiveModal={setActiveModal} />
-      <Contacts ref={linkContacts} />
-      <Footer />
-    </>
-  );
+  if (loading === true) {
+    return <Loading loading={loading} />;
+  } else
+    return (
+      <>
+        <Head />
+        <Header
+          linkHome={linkHome}
+          linkAbout={linkAbout}
+          linkProjects={linkProjects}
+          linkContacts={linkContacts}
+        />
+        <MainSection ref={linkHome} animate={animate} setAnimate={setAnimate} />
+        <About ref={linkAbout} LinkButton={linkProjects} />
+        <Projects ref={linkProjects} setActiveModal={setActiveModal} />
+        <ModalProject project={activeModal} setActiveModal={setActiveModal} />
+        <Contacts ref={linkContacts} />
+        <Footer />
+      </>
+    );
 };
 
 export default App;
