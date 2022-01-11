@@ -1,6 +1,6 @@
 import { React, forwardRef, useEffect } from "react";
 import * as C from "./styles";
-import foto from "../../Assets/column1.png";
+import foto from "../../Assets/banner-ls.png";
 import {
   LogoGithub,
   LogoLinkedin,
