@@ -8,17 +8,24 @@ Esse projeto foi feito com a finalidade de praticar minhas habilidades em React 
 
 
 ## 😎 Sobre mim 
-Sou Desenvolvedor Front-End, tenho 24 anos e estudo para a área há 3 anos. Atualmente estou me apirmorando com a Framework React, e busco oportunidas para atuar na área.
+Sou Desenvolvedor Front-End, tenho 24 anos e estudo para a área há 3 anos. Atualmente estou aprimorando minhas skills com o ReactJs.
 
 
-## Stack utilizada
+## 💻 Stack utilizada
 
-**Front-end:** React, Styled-Components React-ionicons, React-Helmet, HTML5 e CSS3;
+### Front-end: 
+- React;
+- Styled-Components;
+- React-ionicons;
+- React-Helmet;
+- HTML5;
+- CSS3.
 
-**Back-end:** Não possui.
+### Back-end:  
+- Não possui.
 
 
-## Home do Projeto
+## 🌍 Home do Projeto
 
 ![imagem da home](https://i.imgur.com/wpQT2u6.png)
 
@@ -34,7 +41,7 @@ Vamos nos conectar! Siga-me em minhas redes sociais
 [![whatsapp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?phone=5521976370007/)
 
 
-## Aprendizados
+## 📌 Aprendizados
 
 Esse projeto serviu para eu solidificar alguns conceitos e aprendizados com esse incrível framework que é o React.
 Apezar de finalizado, ainda irei incluir algumas mudanças, sempre com o intuito de aplicar funcionalidades que irei aprendendo conforme o React evolui em minha vida. Além disso, é uma grande conquista para mim finalizar esse projeto, por se tratar de uma conquista pessoal. Chegar até aqui, tem sido gratificante pra mim e espero conseguir ir avançando cada vez mais!!
